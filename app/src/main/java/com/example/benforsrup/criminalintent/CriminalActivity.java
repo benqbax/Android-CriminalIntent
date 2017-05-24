@@ -20,7 +20,7 @@ public class CriminalActivity extends AppCompatActivity {
         if (fragment == null) {
             fragment = new CrimeFragment();
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
-
+            String testVar = "testVar";
         }
     }
 }
