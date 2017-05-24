@@ -27,14 +27,12 @@ public class CrimeListFragment extends Fragment {
         mCrimeRecyclerView = (RecyclerView) view.findViewById(R.id.crime_recycler_view);
         mCrimeRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        Log.i(TAG, "testing");
         updateUI();
 
         return view;
     }
 
     private void updateUI(){
-        Log.i(TAG, "testing");
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         List<Crime> crimes = crimeLab.getCrimes();
 
@@ -42,15 +40,9 @@ public class CrimeListFragment extends Fragment {
         mCrimeRecyclerView.setAdapter(mAdapter);
     }
 
-    //Viewholder
-    private class CrimeHolder extends RecyclerView.ViewHolder {
-        public CrimeHolder(LayoutInflater inflater, ViewGroup parent){
-            super(inflater.inflate(R.layout.list_item_crime, parent, false));
-        }
-    }
-
     //adapter
     private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {
+
         private List<Crime> mCrimes;
 
         public CrimeAdapter(List<Crime> crimes){
@@ -73,6 +65,15 @@ public class CrimeListFragment extends Fragment {
             return mCrimes.size();
         }
     }
+
+    //Viewholder
+    private class CrimeHolder extends RecyclerView.ViewHolder {
+        public CrimeHolder(LayoutInflater inflater, ViewGroup parent){
+            super(inflater.inflate(R.layout.list_item_crime, parent, false));
+        }
+    }
+
+
 
 }
 
