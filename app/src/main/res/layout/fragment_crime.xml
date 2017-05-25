@@ -22,10 +22,12 @@
         style="?android:listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/crime_date"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:padding="20dp"/>
     <CheckBox
         android:text="@string/crime_solved_label"
         android:id="@+id/crime_solved"

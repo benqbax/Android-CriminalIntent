@@ -44,4 +44,8 @@ public class Crime {
         mSolved = solved;
     }
 
+    public boolean isSolved(){
+        return mSolved;
+    }
+
 }

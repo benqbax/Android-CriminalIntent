@@ -21,6 +21,8 @@ public class CrimeLab {
         }
         return sCrimeLab;
     }
+
+    //constructor
     private  CrimeLab(Context context){
         mCrimes = new ArrayList<>();
 
